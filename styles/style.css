@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+
+body {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 60em;
+  font-family: "Roboto Mono", sans-serif;
+  line-height: 1.5;
+  color: #2d354c;
+}
+
+.game-title {
+  color: #ffd700;
+  text-align: center;
+  text-decoration: solid;
+}
+
+/* button fading classes */
+.hide {
+  opacity: 0;
+}
+
+#button3,
+#button2 {
+  -webkit-transition: -webkit-transform 2s; /* Safari */
+  transition: transform 2s;
+}
+#button1 {
+  z-index: 10;
+  -webkit-transition: opacity 2s; /* Safari */
+  transition: opacity 2s;
+}
+
+.animateToRight {
+  -webkit-transform: translate(100px); /* Safari */
+  transform: translate(100px);
+}
+.animateToLeft {
+  -webkit-transform: translate(-100px); /* Safari */
+  transform: translate(-100px);
+}
+
+button {
+  background-color: black;
+  border: 8px groove red;
+  border-radius: 8%;
+  color: #ffd700;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+.blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+}
