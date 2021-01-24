@@ -1,18 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
 
 body {
+  background-color: black;
   margin: 0 auto;
   padding: 1em;
   max-width: 60em;
   font-family: "Roboto Mono", sans-serif;
   line-height: 1.5;
-  color: #2d354c;
+  color: #211102;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-title {
   color: #ffd700;
   text-align: center;
   text-decoration: solid;
+}
+
+/* Game Container */
+
+.story-container {
+  background-color: #bda863;
+  height: 70vh;
+  width: 80vh;
+}
+
+/* Status container */
+
+.status-container {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #211102;
+  color: #d6ceba;
+}
+
+.status-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-top: 1em;
+}
+
+/* decision text */
+
+.decision-text-container {
+  text-align: center;
+  padding-top: 5em;
+}
+
+/* footer: player info */
+
+.player-info {
+  width: 80vh;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #211102;
+  color: #d6ceba;
 }
 
 /* button fading classes */
@@ -25,6 +72,7 @@ body {
   -webkit-transition: -webkit-transform 2s; /* Safari */
   transition: transform 2s;
 }
+
 #button1 {
   z-index: 10;
   -webkit-transition: opacity 2s; /* Safari */
@@ -42,12 +90,12 @@ body {
 
 button {
   background-color: black;
-  border: 8px groove red;
+  border: 8px none red;
   border-radius: 8%;
   color: #ffd700;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: double;
   font-size: 16px;
   position: absolute;
   left: 50%;
@@ -56,13 +104,12 @@ button {
   margin-left: -50px;
 }
 .blobs {
-  position: absolute;
+  background-color: #bda863;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background: white;
-  width: 400px;
-  height: 200px;
-  margin: auto;
+  margin: 0 0 0 0;
+  background: #bda863;
+  padding-top: 20px;
 }
