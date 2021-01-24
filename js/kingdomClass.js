@@ -9,6 +9,5 @@ class Kingdom {
   updateKingdom() {
     // Based on a decision the player makes
     // update the kindom status
-    // have to recieve something?
   }
 }
