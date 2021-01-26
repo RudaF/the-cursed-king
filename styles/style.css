@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 
 body {
   background-color: black;
   margin: 0 auto;
   padding: 1em;
   max-width: 60em;
-  font-family: "Roboto Mono", sans-serif;
+  font-family: "MedievalSharp", cursive;
   line-height: 1.5;
   color: #211102;
   display: flex;
@@ -23,8 +23,8 @@ body {
 
 .story-container {
   background-color: #bda863;
-  height: 70vh;
-  width: 80vh;
+  height: 600px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,12 +34,14 @@ body {
 /* Status container */
 
 .status-container {
-  width: 80vh;
+  width: 100%;
+  height: 60px;
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
   background-color: #211102;
   color: #d6ceba;
+  word-break: break-all;
 }
 
 .status-container ul {
@@ -47,6 +49,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
+  flex-wrap: wrap;
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 0;
@@ -56,19 +59,32 @@ body {
 /* decision text */
 
 .decision-text-container {
-  text-align: center;
+  width: 80%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: justify;
   padding-top: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-bottom: 10%;
+  /* word-break: break-all; */
 }
 
 /* footer: player info */
 
 .player-info {
-  width: 80vh;
+  width: 60%;
+  height: 60px;
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
   background-color: #211102;
   color: #d6ceba;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* button fading classes */
@@ -76,13 +92,12 @@ body {
   opacity: 0;
 }
 
-#button3,
-#button2 {
+.multiple-choice-transition {
   -webkit-transition: -webkit-transform 2s; /* Safari */
   transition: transform 2s;
 }
 
-#button1 {
+.single-choice-fade {
   z-index: 10;
   -webkit-transition: opacity 2s; /* Safari */
   transition: opacity 2s;
@@ -97,31 +112,52 @@ body {
   transform: translate(-100px);
 }
 
-button {
+.choice-buttons {
   background-color: black;
-  border: 8px none red;
-  border-radius: 8%;
   color: #ffd700;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: double;
   font-size: 16px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
 }
-.blobs {
+
+.choice-buttons-container {
   background-color: #bda863;
-  background: #bda863;
-  padding-top: 20px;
-  margin: auto;
-  width: 80vh;
-  border: 1px solid red;
-  height: 40vh;
-}
-.vertical-center {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 7%;
   display: flex;
-  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* input placeholder */
+
+.form__group {
+  position: relative;
+
+  width: 50%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #9b9b9b;
+  padding: 7px 0;
+  background: transparent;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
 }

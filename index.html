@@ -12,25 +12,43 @@
     <section class="story-container">
       <div class="status-container">
         <ul>
-          <li id="church">Church:</li>
-          <li id="population">Population:</li>
-          <li id="army">Army:</li>
-          <li id="economy">Economy:</li>
+          <li id="church"></li>
+          <li id="population"></li>
+          <li id="army"></li>
+          <li id="economy"></li>
         </ul>
       </div>
-      <div class="decision-text-container">
-        This is where the current decision text will be.
+      <div id="main-text" class="decision-text-container"></div>
+
+      <!-- <div class="person-container">
+
+        <input id="name-input" type="text" placeholder="Write thy name!" />
+      </div> -->
+      <div id="buttons-container" class="choice-buttons-container">
+        <!-- <button id="right-choice-button" class="choice-buttons">No</button> -->
+        <button id="single-choice-button" class="choice-buttons">
+          Start Game!
+        </button>
+        <!-- <button id="left-choice-button" class="choice-buttons">Yes</button> -->
       </div>
-      <div class="person-container"></div>
-      <div class="blobs">
-        <button id="button2">No</button>
-        <button id="button1">this is a big mf text</button>
-        <button id="button3">Yes</button>
+      <div id="input-text-holder" class="form__group">
+        <!-- <input
+          type="input"
+          class="form__field"
+          placeholder="Write thy name!"
+          name="Write thy name!"
+          id="name"
+          required
+        /> -->
       </div>
     </section>
 
-    <footer class="player-info">This is where some things will be.</footer>
+    <footer id="player-id" class="player-info">
+      <div id="name-holder"></div>
+      <div id="age-holder"></div>
+    </footer>
   </body>
+  <script type="text/javascript" src="./js/gameDialogues.js"></script>
   <script type="text/javascript" src="./js/gameStyles.js"></script>
   <script type="text/javascript" src="./js/playerClass.js"></script>
   <script type="text/javascript" src="./js/kingdomClass.js"></script>
