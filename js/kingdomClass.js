@@ -22,6 +22,3 @@ class Kingdom {
     this.economyHTMLNode.innerText = `Economy: ${this.economy}`;
   }
 }
-
-let kingdom = new Kingdom();
-kingdom.printCurrentStatus();
