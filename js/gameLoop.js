@@ -44,10 +44,13 @@ const ageHolder = document.getElementById("age-holder");
 
 const playerNameHolder = document.getElementById("input-text-holder");
 
+let clickCounter = 0;
+
+let kingdom = new Kingdom();
+let player = new Player("");
+
 function startGame() {
   singleButton.innerText = "I am King...";
-  let kingdom = new Kingdom();
-  kingdom.printCurrentStatus();
   textContainer.innerText = demon[0];
   playerNameHolder.innerHTML =
     '<input  type="input" id="name"  class="form__field" placeholder="Write thy name!" name="Write thy name!" required/>';
@@ -72,11 +75,6 @@ function printPlayerName() {
     titles[Math.floor(Math.random() * titles.length)];
   ageHolder.innerText = ageVariable;
   playerNameHolder.parentElement.removeChild(playerNameHolder);
-  textContainer.innerText = demon[1];
-  singleButton.innerText = "I want to forever be King.";
-  singleButton.onclick = () => {
-    textContainer.innerText = demon[2];
-  };
 }
 
 function gameLoop() {
@@ -88,4 +86,19 @@ function gameOver() {}
 
 function continueGame() {}
 
-singleButton.onclick = startGame;
+singleButton.addEventListener("click", () => {
+  clickCounter++;
+  console.log(clickCounter);
+  if (clickCounter == 1) {
+    startGame();
+  } else if (clickCounter == 2) {
+    printPlayerName();
+    textContainer.innerText = demon[1];
+    singleButton.innerText = "I want to forever be King.";
+  } else if (clickCounter == 3) {
+    textContainer.innerText = demon[2];
+    singleButton.innerText = "...";
+  } else {
+    gameLoop();
+  }
+});
