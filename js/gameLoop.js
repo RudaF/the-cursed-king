@@ -43,7 +43,6 @@ let clickCounter = 0;
 let yearCounter = 0;
 
 let kingdom = new Kingdom();
-let player = new Player("");
 
 function startGame() {
   singleButton.innerText = "I am King...";
