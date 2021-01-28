@@ -16,8 +16,8 @@ I am a bachelor of mathematics and currently a student at Ironhack!
 
 ## Play now!
 
-You can play this game at: https://rudaf.github.io/the-cursed-king/
+You can play this game [on this link!](https://rudaf.github.io/the-cursed-king/)
 
 ## Find out more about this project
 
-You can find out more at: https://docs.google.com/presentation/d/1U0QZS9BirpryZh2h-GL7GHg7Lt8jTTDyvOn5HiGGpfc/edit?usp=sharing
+You can find out more [here!](https://docs.google.com/presentation/d/1U0QZS9BirpryZh2h-GL7GHg7Lt8jTTDyvOn5HiGGpfc/edit?usp=sharing)
