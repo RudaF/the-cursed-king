@@ -92,7 +92,7 @@ body {
   opacity: 0;
 }
 
-.multiple-choice-transition {
+/* .multiple-choice-transition {
   -webkit-transition: -webkit-transform 2s; /* Safari */
   transition: transform 2s;
 }
@@ -110,7 +110,7 @@ body {
 .animateToLeft {
   -webkit-transform: translate(-100px); /* Safari */
   transform: translate(-100px);
-}
+} 
 
 .choice-buttons {
   background-color: black;
@@ -118,6 +118,8 @@ body {
   padding: 15px 32px;
   text-align: center;
   font-size: 16px;
+  width: 40%;
+  height: 80%;
 }
 
 .choice-buttons-container {
