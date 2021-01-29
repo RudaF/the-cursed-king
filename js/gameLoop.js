@@ -23,6 +23,18 @@ const demon = [
 
 const end = [];
 
+const backgroundTune = new Audio();
+backgroundTune.src = "./sounds/backgroundTune.mp3";
+backgroundTune.volume = 0.3;
+
+const deathTune = new Audio();
+deathTune.src = "./sounds/deathMusic.mp3";
+deathTune.volume = 0.3;
+
+const deathLaugh = new Audio();
+deathLaugh.src = "./sounds/deathLaugh.mp3";
+deathLaugh.volume = 0.3;
+
 let nameVariable = "";
 let year = 1;
 let ageVariable = `Year ${year} of King ${nameVariable}`;
@@ -45,6 +57,7 @@ let yearCounter = 0;
 let kingdom = new Kingdom();
 
 function startGame() {
+  backgroundTune.play();
   singleButton.innerText = "I am King...";
   textContainer.innerText = demon[0];
   playerNameHolder.innerHTML =
@@ -123,6 +136,9 @@ function gameLoop() {
 }
 
 function gameOver(death) {
+  backgroundTune.pause();
+  deathLaugh.play();
+  deathTune.play();
   switch (death) {
     case 0:
       if (kingdom.church == 0) {
@@ -172,6 +188,8 @@ function gameOver(death) {
 }
 
 function continueGame() {
+  deathTune.pause();
+  backgroundTune.play();
   gameInitialLoop();
 }
 
